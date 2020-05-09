@@ -1,16 +1,41 @@
 
-server:
-  port: 9000
 
-
+---
 spring:
   application:
     name: spring-cloud-eureka
   profiles: test
-
+server:
+  port: 8000
 eureka:
   instance:
     hostname: localhost
   client:
     serviceUrl:
-      defaultZone: http://localhost:9000/eureka/
+      defaultZone: http://localhost:8000/eureka/
+---
+#spring:
+#  application:
+#    name: spring-cloud-eureka
+#  profiles: peer2
+#server:
+#  port: 8001
+#eureka:
+#  instance:
+#    hostname: localhost
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8000/eureka/,http://localhost:8002/eureka/
+#---
+#spring:
+#  application:
+#    name: spring-cloud-eureka
+#  profiles: peer3
+#server:
+#  port: 8002
+#eureka:
+#  instance:
+#    hostname: localhost
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8000/eureka/,http://localhost:8001/eureka/

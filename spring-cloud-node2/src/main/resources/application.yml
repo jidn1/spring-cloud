@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: node2
+  profiles: test
+server:
+  port: 9002
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/
+    register-with-eureka: true
+
+feign:
+  hystrix:
+    enabled: true
