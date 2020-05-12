@@ -1,18 +1,20 @@
 
 
----
+server:
+  port: 8000
 spring:
   application:
     name: spring-cloud-eureka
   profiles: test
-server:
-  port: 8000
+
 eureka:
   instance:
     hostname: localhost
   client:
     serviceUrl:
       defaultZone: http://localhost:8000/eureka/
+    register-with-eureka: false
+    fetch-registry: false
 ---
 #spring:
 #  application:
