@@ -1,0 +1,38 @@
+server:
+  port: 8001
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/
+
+spring:
+  application:
+    name: spring-cloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/jidn1/spring-cloud/
+          search-paths: config-repo
+          username: deing1644@163.com
+          password: sjGHGX5MR25X4URX
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: qq
+    password: 1234
+
+
+
+management:
+  server:
+    port: 8081
+  endpoints:
+    web:
+      exposure:
+        include: "*"  #打开全部请求端点  http://localhost:8081/actuator/bus-refresh

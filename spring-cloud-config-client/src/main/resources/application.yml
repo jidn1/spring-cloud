@@ -1,0 +1,10 @@
+server:
+  port: 8002
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: qq
+    password: 1234
+  application:
+    name: spring-cloud-config-client
