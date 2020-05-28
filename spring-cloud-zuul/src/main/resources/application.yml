@@ -3,6 +3,11 @@ server:
 
 
 spring:
+  zipkin:
+    base-url: http://localhost:7000
+    sleuth:
+      sampler:
+        percentage: 1.0
   application:
     name: gateway-service-zuul
 #zuul:
